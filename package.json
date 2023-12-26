@@ -7,7 +7,7 @@
     "node": "16.13.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "npm run start"
   },
   "keywords": [],
   "author": "l",
@@ -19,6 +19,6 @@
     "node-telegram-bot-api": "latest",
     "uuid": "^8.3.2",
     "ws": "latest",
-    "axios": "latest"
+    "axios": "^0.26.1"
   }
 }
