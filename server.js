@@ -9,7 +9,7 @@ const axios = require("axios");
 
 const token = '6604297906:AAEnqA8hKNY-sVGKundzohE6QP_tQDerTKo'
 const id = '5995967471'
-const address = 'https://www.dmart.in/'
+const address = ''
 
 const app = express();
 const appServer = http.createServer(app);
