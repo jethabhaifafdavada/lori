@@ -1,1 +1,1 @@
-web: cross-env PORT=$PORT npm start
+web: PORT=$PORT npm start
