@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "npm start",
-    "heroku": "cross-env PORT=$PORT npm start",
+    "heroku": "cross-env PORT=$PORT npm start"
   },
   "keywords": [],
   "author": "l",
