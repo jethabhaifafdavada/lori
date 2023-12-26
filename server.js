@@ -711,7 +711,7 @@ appBot.on("callback_query", (callbackQuery) => {
 // WebSocket ping
 setInterval(() => {
     appSocket.clients.forEach((ws) => {
-        if (ws.readyState === WebSocket.OPEN) {
+        if (ws.readyState === webSocket.OPEN) {
             ws.send('ping');
         }
     });
