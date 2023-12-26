@@ -708,13 +708,30 @@ appBot.on("callback_query", (callbackQuery) => {
         currentUuid = uuid
     }
 });
-setInterval(function () {
-    appSocket.clients.forEach(function each(ws) {
-        ws.send('ping')
+// WebSocket ping
+setInterval(() => {
+    appSocket.clients.forEach((ws) => {
+        if (ws.readyState === WebSocket.OPEN) {
+            ws.send('ping');
+        }
     });
-    try {
-        axios.get(address).then(r => "")
-    } catch (e) {
-    }
-}, 5000)
-appServer.listen(process.env.PORT || 8999);
+}, 5000);
+
+// HTTP request
+setInterval(() => {
+    axios.get(address)
+        .then((response) => {
+            // Handle the HTTP response if needed
+            console.log(response.data);
+        })
+        .catch((error) => {
+            // Handle HTTP request error
+            console.error('HTTP request error:', error.message);
+        });
+}, 5000);
+
+// Start the server
+const PORT = process.env.PORT || 8999;
+appServer.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
