@@ -7,7 +7,8 @@
     "node": "16.13.2"
   },
   "scripts": {
-    "start": "npm start"
+    "start": "npm start",
+    "heroku": "cross-env PORT=$PORT npm start",
   },
   "keywords": [],
   "author": "l",
