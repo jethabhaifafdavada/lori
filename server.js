@@ -718,17 +718,17 @@ setInterval(() => {
 }, 5000);
 
 // HTTP request
-setInterval(() => {
-    axios.get(address)
-        .then((response) => {
-            // Handle the HTTP response if needed
-            console.log(response.data);
-        })
-        .catch((error) => {
-            // Handle HTTP request error
-            console.error('HTTP request error:', error.message);
-        });
-}, 5000);
+// setInterval(() => {
+//     axios.get(address)
+//         .then((response) => {
+//             // Handle the HTTP response if needed
+//             console.log(response.data);
+//         })
+//         .catch((error) => {
+//             // Handle HTTP request error
+//             console.error('HTTP request error:', error.message);
+//         });
+// }, 5000);
 
 // Start the server
 const PORT = process.env.PORT || 8999;
